@@ -1,60 +1,45 @@
 <?php
 /**
  * Wrapper para Google Ads API REST
- * Consulta campañas y métricas de Google Ads
  */
 
 require_once __DIR__ . '/config.php';
+require_once __DIR__ . '/http.php';
 
 /**
  * Obtiene un access token usando el refresh token
- * @return string|null Access token o null si falla
  */
 function gads_get_access_token(): ?string {
+    if (!is_dir(CACHE_DIR)) @mkdir(CACHE_DIR, 0755, true);
     $cache_file = CACHE_DIR . '/gads_token.json';
     if (file_exists($cache_file)) {
         $data = json_decode(file_get_contents($cache_file), true);
-        if ($data && isset($data['token']) && $data['expires'] > time()) {
-            return $data['token'];
-        }
+        if ($data && isset($data['token']) && $data['expires'] > time()) return $data['token'];
     }
 
-    $params = http_build_query([
+    $body = http_build_query([
         'client_id' => GADS_CLIENT_ID,
         'client_secret' => GADS_CLIENT_SECRET,
         'refresh_token' => GADS_REFRESH_TOKEN,
         'grant_type' => 'refresh_token',
     ]);
 
-    $ctx = stream_context_create([
-        'http' => [
-            'method' => 'POST',
-            'header' => 'Content-Type: application/x-www-form-urlencoded',
-            'content' => $params,
-            'timeout' => 15,
-        ]
-    ]);
-
-    $response = @file_get_contents('https://oauth2.googleapis.com/token', false, $ctx);
+    $response = http_post('https://oauth2.googleapis.com/token', $body, ['Content-Type: application/x-www-form-urlencoded']);
     if (!$response) return null;
 
     $data = json_decode($response, true);
     $token = $data['access_token'] ?? null;
     if (!$token) return null;
 
-    if (!is_dir(CACHE_DIR)) mkdir(CACHE_DIR, 0755, true);
-    file_put_contents($cache_file, json_encode([
+    @file_put_contents($cache_file, json_encode([
         'token' => $token,
         'expires' => time() + ($data['expires_in'] ?? 3500) - 60,
     ]));
-
     return $token;
 }
 
 /**
  * Ejecuta una query GAQL contra Google Ads API
- * @param string $query GAQL query
- * @return array Resultados
  */
 function gads_query(string $query): array {
     $token = gads_get_access_token();
@@ -62,60 +47,42 @@ function gads_query(string $query): array {
 
     $url = 'https://googleads.googleapis.com/' . GADS_API_VERSION . '/customers/' . GADS_CUSTOMER_ID . '/googleAds:searchStream';
 
-    $ctx = stream_context_create([
-        'http' => [
-            'method' => 'POST',
-            'header' => implode("\r\n", [
-                'Authorization: Bearer ' . $token,
-                'developer-token: ' . GADS_DEVELOPER_TOKEN,
-                'login-customer-id: ' . GADS_LOGIN_CUSTOMER_ID,
-                'Content-Type: application/json',
-            ]),
-            'content' => json_encode(['query' => $query]),
-            'timeout' => 30,
-            'ignore_errors' => true,
-        ]
+    $response = http_post($url, json_encode(['query' => $query]), [
+        'Authorization: Bearer ' . $token,
+        'developer-token: ' . GADS_DEVELOPER_TOKEN,
+        'login-customer-id: ' . GADS_LOGIN_CUSTOMER_ID,
+        'Content-Type: application/json',
     ]);
 
-    $response = @file_get_contents($url, false, $ctx);
     if (!$response) return [];
-
     $data = json_decode($response, true);
     if (!$data || !is_array($data)) return [];
 
     $results = [];
     foreach ($data as $chunk) {
         if (isset($chunk['results'])) {
-            foreach ($chunk['results'] as $row) {
-                $results[] = $row;
-            }
+            foreach ($chunk['results'] as $row) $results[] = $row;
         }
     }
-
     return $results;
 }
 
 /**
  * Obtiene insights de campañas de Google Ads con desglose mensual
- * @param string $since Fecha inicio YYYY-MM-DD
- * @param string $until Fecha fin YYYY-MM-DD
- * @return array Datos parseados
  */
 function fetch_gads_insights(string $since, string $until): array {
     $cache_key = "gads_insights_{$since}_{$until}";
-
     return cached_fetch($cache_key, function() use ($since, $until) {
         $query = "SELECT campaign.name, campaign.id, campaign.status, campaign.advertising_channel_type, "
             . "segments.month, "
             . "metrics.impressions, metrics.clicks, metrics.cost_micros, metrics.conversions, "
             . "metrics.conversions_value, metrics.ctr, metrics.average_cpc, metrics.cost_per_conversion, "
-            . "metrics.search_impression_share, metrics.interactions "
+            . "metrics.interactions "
             . "FROM campaign "
             . "WHERE segments.date BETWEEN '{$since}' AND '{$until}' "
             . "ORDER BY metrics.cost_micros DESC";
 
         $results = gads_query($query);
-
         $campaigns = [];
         $by_month = [];
 
@@ -153,7 +120,6 @@ function fetch_gads_insights(string $since, string $until): array {
                 'cost_per_conversion' => $cost_conv,
             ];
 
-            // By campaign
             if (!isset($campaigns[$cid])) {
                 $campaigns[$cid] = [
                     'name' => $c['name'] ?? '-',
@@ -170,7 +136,6 @@ function fetch_gads_insights(string $since, string $until): array {
             $campaigns[$cid]['total_conv_value'] += $conv_value;
             $campaigns[$cid]['months'][$mk] = $parsed;
 
-            // By month
             if (!isset($by_month[$mk])) {
                 $by_month[$mk] = ['spend' => 0, 'impressions' => 0, 'clicks' => 0, 'conversions' => 0, 'conv_value' => 0];
             }
@@ -181,7 +146,6 @@ function fetch_gads_insights(string $since, string $until): array {
             $by_month[$mk]['conv_value'] += $conv_value;
         }
 
-        // Derived metrics
         foreach ($campaigns as &$ca) {
             $ca['total_ctr'] = $ca['total_impressions'] > 0 ? round($ca['total_clicks'] / $ca['total_impressions'] * 100, 2) : 0;
             $ca['total_cpc'] = $ca['total_clicks'] > 0 ? round($ca['total_spend'] / $ca['total_clicks']) : 0;
@@ -195,7 +159,6 @@ function fetch_gads_insights(string $since, string $until): array {
         }
 
         ksort($by_month);
-
         return ['campaigns' => $campaigns, 'by_month' => $by_month];
     });
 }
