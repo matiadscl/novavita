@@ -1,0 +1,5 @@
+cache/
+*.json
+shopify_token.txt
+shopify_callback.php
+includes/credentials.php
