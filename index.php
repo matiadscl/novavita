@@ -462,34 +462,39 @@ $tab = filter_input(INPUT_GET, 'tab', FILTER_DEFAULT) ?? 'campanas';
                 </div>
 
                 <div class="owner-card owner-card-green" style="margin-bottom:1.25rem;">
-                    <h3>Google Ads es el canal más eficiente</h3>
-                    <p>La campaña "Máximo rendimiento general" en Google logró <strong>181 conversiones con $395K invertidos</strong> (CPA ~$2.180). En Meta, el CPA de compras web es de ~$21.600. Google Ads es <strong>10x más eficiente</strong> en costo por conversión porque captura demanda existente (gente buscando "depilación láser Curicó"). Meta sirve para crear demanda nueva y retargeting.</p>
+                    <h3>Presupuesto total recomendado: $1.240.000 CLP/mes</h3>
+                    <p>Basado en el promedio de inversión de los últimos 3 meses (Meta ~$1.115.000 + Google ~$125.000). Se mantiene el monto total pero se <strong>redistribuye</strong> hacia los canales más rentables. Google Ads logró 181 conversiones a $2.180 c/u vs Meta a ~$21.600 c/u. Revenue en Shopify: $21.3M. ROAS actual: ~5.6x. Objetivo a 6 meses: ROAS 8x+.</p>
                 </div>
 
                 <div class="diagnostic-grid">
                     <div class="diagnostic-card diagnostic-info">
-                        <h3>Google Ads — 40% del presupuesto</h3>
-                        <p>Aumentar inversión en Google. La campaña Performance Max está funcionando bien. Con más presupuesto, puede capturar más búsquedas. Si el presupuesto total es $500K/mes: <strong>$200K para Google</strong>.</p>
+                        <h3>Google Ads — $500.000/mes (40%)</h3>
+                        <p>Cuadruplicar inversión en Google (de $125K a $500K). Performance Max es el canal más rentable. Cada peso invertido aquí genera más retorno que en cualquier otro canal.</p>
                     </div>
                     <div class="diagnostic-card diagnostic-info">
-                        <h3>Meta — Tráfico IG Stories — 15%</h3>
-                        <p>Campaña siempre activa de bajo costo para alimentar el embudo con seguidores nuevos. Solo Stories, segmentación local. <strong>$75K/mes</strong>. CPC esperado: ~$10.</p>
+                        <h3>Meta — Tráfico IG Stories — $185.000/mes (15%)</h3>
+                        <p>Campaña siempre activa en Stories, solo Curicó +30km, mujeres 25-54. CPC esperado ~$10. Alimenta el tope del embudo con seguidores nuevos.</p>
                     </div>
                     <div class="diagnostic-card diagnostic-warning">
-                        <h3>Meta — Retargeting/Conversiones — 30%</h3>
-                        <p>Campañas ABO de conversión dirigidas a seguidores, visitantes web e interactuados. Incluye campaña de WhatsApp. <strong>$150K/mes</strong>. Este es el presupuesto que sube en fechas clave.</p>
+                        <h3>Meta — Retargeting/Conversiones — $370.000/mes (30%)</h3>
+                        <p>Campañas ABO para seguidores, visitantes web e interactuados. Incluye WhatsApp. Escala en fechas clave (Día de la Madre, Black Friday, Navidad).</p>
                     </div>
                     <div class="diagnostic-card diagnostic-warning">
-                        <h3>Meta — Remarketing BOFU — 15%</h3>
-                        <p>Recuperación de carritos abandonados y checkout sin completar. Catálogo dinámico + urgencia. <strong>$75K/mes</strong>. Escalar en semanas previas a fechas comerciales.</p>
+                        <h3>Meta — Remarketing BOFU — $185.000/mes (15%)</h3>
+                        <p>Recuperación de carritos abandonados + checkout sin completar. Catálogo dinámico Shopify + emails Klaviyo. Escala la semana previa a fechas comerciales.</p>
                     </div>
+                </div>
+
+                <div class="owner-card owner-card-yellow" style="margin-top:1.25rem;">
+                    <h3>Plan de optimización: 6 meses (Abril - Septiembre 2026)</h3>
+                    <p>El presupuesto se mantiene en $1.240.000/mes. Cada mes se evalúan los resultados y se redistribuye hacia lo que funciona mejor. Si en 3 meses Google sigue siendo 10x más eficiente, se le asigna más presupuesto. Si un canal no rinde, se reduce. El objetivo es pasar de ROAS 5.6x a 8x+ para octubre 2026.</p>
                 </div>
             </div>
 
             <!-- Calendario comercial -->
             <div class="section-block">
                 <div class="section-block-header">
-                    <span class="section-block-number">4</span>
+                    <span class="section-block-number">5</span>
                     <div>
                         <h2>Calendario Comercial 2026</h2>
                         <p class="section-desc">Fechas clave para activar campañas estacionales</p>
@@ -537,46 +542,87 @@ $tab = filter_input(INPUT_GET, 'tab', FILTER_DEFAULT) ?? 'campanas';
 
             <div class="owner-welcome">
                 <h2>Hola Dani y Nelson,</h2>
-                <p>Este resumen les muestra en palabras simples qué está pasando con la publicidad digital de Novavita, qué vamos a hacer para mejorar las ventas, y <strong>qué necesitamos de ustedes</strong> para que la estrategia funcione.</p>
+                <p>Este resumen les muestra en palabras simples cómo están las ventas y la publicidad de Novavita, cuánto se está invirtiendo, qué resultados se están obteniendo, y <strong>qué necesitamos de ustedes</strong> para mejorar.</p>
             </div>
 
-            <!-- Situación actual -->
+            <!-- Números clave -->
             <div class="section-block">
                 <div class="section-block-header">
                     <span class="section-block-number">1</span>
                     <div>
-                        <h2>¿Qué encontramos?</h2>
-                        <p class="section-desc">Estado actual de la publicidad que se estaba manejando</p>
+                        <h2>Los números de Novavita</h2>
+                        <p class="section-desc">Datos reales de ventas y publicidad (enero - abril 2026)</p>
                     </div>
                 </div>
 
                 <div class="owner-cards">
-                    <div class="owner-card owner-card-red">
-                        <h3>La publicidad en Meta (Instagram/Facebook) no estaba generando ventas</h3>
-                        <p>Se invirtieron <strong>$3.5 millones en Meta Ads</strong> entre enero y abril, pero la mayoría del presupuesto estaba en una campaña que mostraba los mismos anuncios a las mismas personas más de 20 veces. Eso es como poner el mismo cartel en la puerta de alguien 20 veces — después de la tercera vez, ya no lo miran.</p>
+                    <div class="owner-card owner-card-green">
+                        <h3>Ventas en la web: $21.283.266 CLP</h3>
+                        <p>Se han realizado <strong>127 pedidos</strong> en Shopify con un ticket promedio de <strong>$168.915</strong>. Los productos más vendidos son los packs de depilación láser. De cada $1 que se invierte en publicidad, vuelven <strong>$5,6 en ventas</strong> — eso es un buen retorno.</p>
                     </div>
 
                     <div class="owner-card owner-card-green">
-                        <h3>Google Ads sí está generando resultados</h3>
-                        <p>La campaña de Google tiene <strong>181 conversiones</strong> con una inversión de $395 mil. Cuando alguien busca "depilación láser Curicó" en Google y les aparece Novavita, eso funciona bien porque esa persona <strong>ya está buscando</strong> lo que ustedes ofrecen.</p>
+                        <h3>Google Ads: el canal más rentable</h3>
+                        <p>La campaña de Google generó <strong>181 conversiones</strong> invirtiendo solo <strong>$395 mil</strong>. Cada conversión costó apenas <strong>$2.180</strong>. Cuando alguien busca "depilación láser Curicó" en Google y les aparece Novavita, la probabilidad de que compre es alta porque <strong>ya está buscando</strong> el servicio.</p>
                     </div>
 
                     <div class="owner-card owner-card-yellow">
-                        <h3>El cambio a Shopify trajo mejoras, pero también problemas</h3>
-                        <p>La página se ve mejor y tiene más funcionalidades. Sin embargo, hay detalles técnicos que debemos revisar: un <strong>temporizador de oferta que expiró</strong> hace un mes (se ve mal), y necesitamos confirmar que cuando alguien compra en la web, Meta y Google registren esa venta correctamente.</p>
+                        <h3>Meta Ads (Instagram/Facebook): necesita optimización</h3>
+                        <p>Se invirtieron <strong>$3.5 millones</strong> en Meta entre enero y abril. Se obtuvieron ventas, pero el costo por venta es <strong>10 veces más caro</strong> que en Google. La campaña principal mostraba los mismos anuncios a las mismas personas más de 20 veces. Vamos a reestructurar esto completamente.</p>
                     </div>
 
                     <div class="owner-card">
-                        <h3>Los anuncios de WhatsApp son los más eficientes para ustedes</h3>
-                        <p>Cuando un anuncio invita a escribir por WhatsApp, el costo por cada persona interesada es <strong>mucho menor</strong> que intentar que compren directo en la web. Esto tiene sentido: Novavita es un negocio local en Curicó, y la gente prefiere consultar antes de comprar un tratamiento.</p>
+                        <h3>WhatsApp: el mejor canal para cerrar ventas</h3>
+                        <p>Los anuncios que invitan a escribir por WhatsApp generan interesados a un costo <strong>mucho menor</strong> que intentar que compren directo en la web. Para un negocio local como Novavita, muchas clientas prefieren preguntar antes de comprar un tratamiento. Vamos a potenciar este canal.</p>
                     </div>
+                </div>
+            </div>
+
+            <!-- Presupuesto -->
+            <div class="section-block">
+                <div class="section-block-header">
+                    <span class="section-block-number">2</span>
+                    <div>
+                        <h2>Presupuesto de Marketing</h2>
+                        <p class="section-desc">Cuánto se está invirtiendo y cómo lo vamos a redistribuir</p>
+                    </div>
+                </div>
+
+                <div class="owner-card owner-card-purple" style="margin-bottom:1.25rem;">
+                    <h3>Inversión actual: ~$1.240.000 CLP/mes</h3>
+                    <p>En los últimos 3 meses se ha invertido un promedio de <strong>$1.240.000 al mes</strong> en publicidad: $1.115.000 en Meta (Instagram/Facebook) y $125.000 en Google. Proponemos <strong>mantener este monto</strong> pero redistribuirlo de forma más inteligente.</p>
+                </div>
+
+                <div class="owner-steps">
+                    <div class="owner-step">
+                        <div class="owner-step-number">Distribución propuesta</div>
+                        <h3>Mismo presupuesto, mejor resultado</h3>
+                        <p>En vez de poner casi todo en Meta (que es más caro), vamos a repartir así:</p>
+                        <ul style="margin:0.75rem 0 0 1.2rem;color:var(--text-secondary);font-size:0.9rem;line-height:2;">
+                            <li><strong>Google Ads: $500.000/mes (40%)</strong> — Es el canal más rentable. Cada $1 invertido en Google genera más ventas que en Meta. Vamos a cuadruplicar la inversión aquí.</li>
+                            <li><strong>Meta - Atraer gente nueva (Stories): $185.000/mes (15%)</strong> — Anuncios en Historias de Instagram para mujeres de Curicó. Costo bajo por clic (~$10).</li>
+                            <li><strong>Meta - Convertir en clientas: $370.000/mes (30%)</strong> — Anuncios de ofertas a quienes ya los siguen o visitaron la web. Incluye WhatsApp.</li>
+                            <li><strong>Meta - Recuperar carritos: $185.000/mes (15%)</strong> — Recordar a quienes agregaron algo al carrito pero no compraron.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="owner-card owner-card-yellow" style="margin-top:1.25rem;">
+                    <h3>Plan de optimización: 6 meses</h3>
+                    <p>El objetivo es <strong>mantener la inversión de $1.240.000/mes y aumentar las ventas</strong> optimizando progresivamente. Mes a mes vamos a analizar qué campañas funcionan mejor y redistribuir el presupuesto hacia lo que genera más ingresos. En 6 meses (para octubre 2026), el objetivo es duplicar el retorno por cada peso invertido.</p>
+                    <ul style="margin:0.75rem 0 0 1.2rem;color:var(--text-secondary);font-size:0.88rem;line-height:1.8;">
+                        <li><strong>Mes 1-2 (Abr-May):</strong> Reestructurar campañas, crear material nuevo, lanzar campaña Día de la Madre</li>
+                        <li><strong>Mes 3-4 (Jun-Jul):</strong> Analizar datos, eliminar lo que no funciona, escalar lo que sí. Día del Padre</li>
+                        <li><strong>Mes 5-6 (Ago-Sep):</strong> Campaña pre-verano de depilación láser, evaluar si se puede aumentar o reducir presupuesto según resultados</li>
+                    </ul>
+                    <p style="margin-top:0.75rem;">Cada mes les vamos a mostrar en este dashboard si la inversión se está recuperando. Si un canal no rinde, le quitamos presupuesto y lo movemos al que sí funciona.</p>
                 </div>
             </div>
 
             <!-- Qué vamos a hacer -->
             <div class="section-block">
                 <div class="section-block-header">
-                    <span class="section-block-number">2</span>
+                    <span class="section-block-number">3</span>
                     <div>
                         <h2>¿Qué vamos a hacer?</h2>
                         <p class="section-desc">Plan de acción en 3 pasos</p>
@@ -587,22 +633,19 @@ $tab = filter_input(INPUT_GET, 'tab', FILTER_DEFAULT) ?? 'campanas';
                     <div class="owner-step">
                         <div class="owner-step-number">Paso 1</div>
                         <h3>Atraer gente nueva que no conoce Novavita</h3>
-                        <p>Vamos a crear anuncios que aparezcan en las <strong>Historias de Instagram</strong> de mujeres de 25 a 54 años que vivan cerca de Curicó y que les interese belleza, spa o cuidado personal. Estos anuncios serán videos cortos que muestren la clínica y testimonios de clientas reales. El objetivo es que conozcan Novavita y empiecen a seguirlos en Instagram.</p>
-                        <span class="owner-step-cost">Inversión estimada: $3.000 - $5.000/día</span>
+                        <p>Vamos a crear anuncios que aparezcan en las <strong>Historias de Instagram</strong> de mujeres de 25 a 54 años que vivan cerca de Curicó y que les interese belleza, spa o cuidado personal. Serán videos cortos de Nelson mostrando la clínica y testimonios de clientas reales. El objetivo es que conozcan Novavita y empiecen a seguirlos.</p>
                     </div>
 
                     <div class="owner-step">
                         <div class="owner-step-number">Paso 2</div>
                         <h3>Convertir seguidoras en clientas</h3>
-                        <p>A las personas que ya los siguen en Instagram o visitaron la página web, les vamos a mostrar <strong>anuncios con ofertas concretas</strong>: packs de depilación láser, tratamientos faciales, gift cards. Estos anuncios llevarán a la web de Novavita para comprar, o a WhatsApp para consultar. Para <strong>Día de la Madre</strong>, crearemos una campaña especial con packs de regalo.</p>
-                        <span class="owner-step-cost">Inversión estimada: $5.000 - $8.000/día por servicio</span>
+                        <p>A quienes ya los siguen o visitaron la web, les mostramos <strong>ofertas concretas</strong>: packs de depilación, faciales, gift cards. Llevan a la web o a WhatsApp. Para <strong>Día de la Madre</strong>, crearemos packs de regalo especiales.</p>
                     </div>
 
                     <div class="owner-step">
                         <div class="owner-step-number">Paso 3</div>
-                        <h3>Recuperar a quienes no terminaron de comprar</h3>
-                        <p>Si alguien entró a la web, puso un pack en el carrito pero no compró, le vamos a mostrar un anuncio recordándole que <strong>su carrito los está esperando</strong>. También vamos a activar emails automáticos (Klaviyo ya está instalado en Shopify) para estos casos.</p>
-                        <span class="owner-step-cost">Inversión estimada: $3.000 - $5.000/día</span>
+                        <h3>Recuperar ventas perdidas</h3>
+                        <p>Hoy, más del <strong>60% de las personas que agregan algo al carrito no terminan de comprar</strong>. Vamos a enviarles emails automáticos y anuncios recordándoles su carrito. También vamos a aumentar la inversión en Google, que es donde más se vende.</p>
                     </div>
                 </div>
             </div>
@@ -610,7 +653,7 @@ $tab = filter_input(INPUT_GET, 'tab', FILTER_DEFAULT) ?? 'campanas';
             <!-- Nelson como rostro -->
             <div class="section-block">
                 <div class="section-block-header">
-                    <span class="section-block-number">3</span>
+                    <span class="section-block-number">4</span>
                     <div>
                         <h2>Nelson: el rostro de Novavita</h2>
                         <p class="section-desc">La humanización de la marca es clave para diferenciarse</p>
@@ -619,7 +662,7 @@ $tab = filter_input(INPUT_GET, 'tab', FILTER_DEFAULT) ?? 'campanas';
 
                 <div class="owner-card owner-card-purple">
                     <h3>¿Por qué Nelson debería aparecer en los anuncios?</h3>
-                    <p>Los datos muestran que los anuncios con <strong>personas reales</strong> (como los testimonios de "Karen") tienen el <strong>doble de efectividad</strong> que los anuncios genéricos con fotos de stock o catálogos. La gente en Curicó quiere saber <strong>quién</strong> les va a hacer el tratamiento.</p>
+                    <p>Los datos muestran que los anuncios con <strong>personas reales</strong> (como los testimonios de "Karen") tienen el <strong>doble de efectividad</strong> que los anuncios genéricos. La gente en Curicó quiere saber <strong>quién</strong> les va a hacer el tratamiento.</p>
                     <p style="margin-top:0.75rem;">Nelson, como cosmetólogo, puede:</p>
                     <ul style="margin-top:0.5rem;margin-left:1.2rem;color:var(--text-secondary);font-size:0.88rem;line-height:1.8;">
                         <li>Explicar en 15 segundos cómo funciona el Soprano Titanium</li>
@@ -652,7 +695,7 @@ $tab = filter_input(INPUT_GET, 'tab', FILTER_DEFAULT) ?? 'campanas';
                                 <li>"¿Sabían que la depilación láser es permanente? Les explico..."</li>
                                 <li>"Este es el tratamiento facial más pedido en nuestra clínica..."</li>
                             </ul>
-                            <span class="owner-todo-deadline">Necesario antes del 18 de abril para Día de la Madre</span>
+                            <span class="owner-todo-deadline">Necesario antes del 18 de abril</span>
                         </div>
                     </div>
 
@@ -669,16 +712,16 @@ $tab = filter_input(INPUT_GET, 'tab', FILTER_DEFAULT) ?? 'campanas';
                         <div class="owner-todo-check">3</div>
                         <div>
                             <h4>Video del tour de la clínica</h4>
-                            <p>Un video de <strong>5-15 segundos</strong> mostrando las instalaciones: recepción, salas de tratamiento, equipamiento. Puede ser grabado con celular moviéndose por el espacio. Este será el anuncio principal para Stories.</p>
+                            <p>Un video de <strong>5-15 segundos</strong> mostrando las instalaciones: recepción, salas de tratamiento, equipamiento. Grabado con celular moviéndose por el espacio. Será el anuncio principal para Stories.</p>
                             <span class="owner-todo-deadline">Necesario antes del 18 de abril</span>
                         </div>
                     </div>
 
-                    <div class="owner-todo-item">
+                    <div class="owner-todo-item owner-todo-urgent">
                         <div class="owner-todo-check">4</div>
                         <div>
                             <h4>Definir packs de Día de la Madre</h4>
-                            <p>Necesitamos que definan <strong>2-3 packs especiales</strong> para regalar en Día de la Madre con precio fijo. Ejemplo: "Pack Relax Mamá" ($89.990 — Limpieza facial + Masaje), "Pack Belleza Total" ($149.990 — 3 sesiones faciales), Gift Card de monto libre.</p>
+                            <p>Necesitamos <strong>2-3 packs especiales</strong> para regalar con precio fijo. Ejemplo: "Pack Relax Mamá" ($89.990 — Limpieza facial + Masaje), "Pack Belleza Total" ($149.990 — 3 sesiones faciales), Gift Card de monto libre.</p>
                             <span class="owner-todo-deadline">Necesario antes del 15 de abril</span>
                         </div>
                     </div>
@@ -686,8 +729,8 @@ $tab = filter_input(INPUT_GET, 'tab', FILTER_DEFAULT) ?? 'campanas';
                     <div class="owner-todo-item">
                         <div class="owner-todo-check">5</div>
                         <div>
-                            <h4>Actualizar la web (Shopify)</h4>
-                            <p>Necesitamos que en la web se cree una <strong>sección "Regalos Día de la Madre"</strong> con los packs definidos. También hay que quitar el countdown expirado (10 de marzo) que todavía aparece en la página principal. <em>Nosotros podemos ayudar con esto si nos dan acceso.</em></p>
+                            <h4>Crear sección "Regalos Día de la Madre" en Shopify</h4>
+                            <p>En la web se necesita una <strong>colección especial</strong> con los packs de regalo. <em>Nosotros podemos ayudar con esto si nos dan acceso al admin de Shopify.</em></p>
                             <span class="owner-todo-deadline">Necesario antes del 18 de abril</span>
                         </div>
                     </div>
@@ -696,7 +739,7 @@ $tab = filter_input(INPUT_GET, 'tab', FILTER_DEFAULT) ?? 'campanas';
                         <div class="owner-todo-check">6</div>
                         <div>
                             <h4>Fotos de antes/después</h4>
-                            <p>Si tienen <strong>fotos de resultados de tratamientos</strong> (con permiso de las clientas), nos sirven para crear carruseles de anuncios. Idealmente de depilación láser y faciales que son los servicios más buscados.</p>
+                            <p>Fotos de <strong>resultados de tratamientos</strong> (con permiso de las clientas). Idealmente depilación láser y faciales. Sirven para crear carruseles de anuncios.</p>
                             <span class="owner-todo-deadline">Cuando estén disponibles</span>
                         </div>
                     </div>
@@ -706,7 +749,7 @@ $tab = filter_input(INPUT_GET, 'tab', FILTER_DEFAULT) ?? 'campanas';
             <!-- Próximos pasos -->
             <div class="section-block">
                 <div class="section-block-header">
-                    <span class="section-block-number">4</span>
+                    <span class="section-block-number">5</span>
                     <div>
                         <h2>Próximos Pasos</h2>
                         <p class="section-desc">Cronograma de las próximas semanas</p>
@@ -717,28 +760,33 @@ $tab = filter_input(INPUT_GET, 'tab', FILTER_DEFAULT) ?? 'campanas';
                     <div class="timeline-item timeline-now">
                         <span class="timeline-date">11 - 15 Abr</span>
                         <h4>Esta semana</h4>
-                        <p>Ustedes: graban los videos y definen los packs. Nosotros: corregimos los temas técnicos de la web y preparamos las audiencias en Meta.</p>
+                        <p>Ustedes: graban los videos y definen los packs. Nosotros: reestructuramos las campañas, aumentamos Google Ads y preparamos las audiencias en Meta.</p>
                     </div>
                     <div class="timeline-item">
                         <span class="timeline-date">16 - 18 Abr</span>
                         <h4>Preparación</h4>
-                        <p>Nosotros: creamos los anuncios con el material que nos entreguen, configuramos las campañas y los emails automáticos de carritos abandonados.</p>
+                        <p>Creamos los anuncios con el material entregado, configuramos campañas y emails automáticos de carritos abandonados.</p>
                     </div>
                     <div class="timeline-item">
                         <span class="timeline-date">18 Abr - 4 May</span>
-                        <h4>Campaña activa</h4>
-                        <p>Se activan las 3 etapas de publicidad. Monitoreamos diariamente y optimizamos en base a resultados.</p>
+                        <h4>Campaña Día de la Madre activa</h4>
+                        <p>Se activan las 3 etapas. Monitoreamos y optimizamos diariamente.</p>
                     </div>
                     <div class="timeline-item timeline-hot">
                         <span class="timeline-date">5 - 10 May</span>
                         <h4>Semana del Día de la Madre</h4>
-                        <p>Aumentamos presupuesto al máximo. Anuncios de urgencia: "Últimos días para reservar el regalo de mamá". Es donde se cierra la mayor cantidad de ventas.</p>
+                        <p>Aumentamos presupuesto. Anuncios de urgencia. Es donde se cierra la mayor cantidad de ventas.</p>
+                    </div>
+                    <div class="timeline-item">
+                        <span class="timeline-date">15 May</span>
+                        <h4>Primer informe de resultados</h4>
+                        <p>Les presentamos resultados de la campaña de Día de la Madre y definimos los ajustes para el mes siguiente.</p>
                     </div>
                 </div>
             </div>
 
             <div class="owner-footer">
-                <p>Este dashboard se actualiza en tiempo real con los datos de Meta Ads y Google Ads. Pueden entrar en cualquier momento para ver cómo van las campañas. Cualquier duda, nos escriben.</p>
+                <p>Este dashboard se actualiza en tiempo real con los datos de Meta Ads, Google Ads y Shopify. Pueden entrar en cualquier momento para ver cómo van las campañas y las ventas. Cualquier duda, nos escriben.</p>
                 <p style="margin-top:0.5rem;color:var(--accent);font-weight:600;">— Equipo Facand</p>
             </div>
 
