@@ -48,13 +48,29 @@ $tab = filter_input(INPUT_GET, 'tab', FILTER_DEFAULT) ?? 'campanas';
             <?php if ($tab === 'campanas'): ?>
             <!-- ==================== TAB: ANÁLISIS DE CAMPAÑAS ==================== -->
             <div class="page-header">
-                <h1>Análisis de Campañas Meta Ads</h1>
+                <h1>Análisis de Campañas</h1>
                 <div class="header-controls">
-                    <select id="statusFilter" onchange="renderCampaigns()">
+                    <select id="platformFilter" onchange="onFiltersChange()">
+                        <option value="all">Meta + Google</option>
+                        <option value="meta">Solo Meta Ads</option>
+                        <option value="google">Solo Google Ads</option>
+                    </select>
+                    <select id="statusFilter" onchange="onFiltersChange()">
                         <option value="all">Todas</option>
                         <option value="ACTIVE">Activas</option>
                         <option value="PAUSED">Inactivas/Pausadas</option>
                     </select>
+                    <select id="dateFilter" onchange="onDateFilterChange()">
+                        <option value="all">Todo el periodo</option>
+                        <option value="current">Mes en curso</option>
+                        <option value="last">Último mes</option>
+                        <option value="custom">Personalizado</option>
+                    </select>
+                    <div id="customDates" style="display:none;">
+                        <input type="date" id="dateFrom" value="2026-01-01">
+                        <input type="date" id="dateTo" value="<?php echo date('Y-m-d'); ?>">
+                        <button onclick="loadWithDates()" class="btn-filter">Aplicar</button>
+                    </div>
                     <span id="periodBadge" class="badge badge-period"></span>
                 </div>
             </div>
@@ -159,6 +175,14 @@ $tab = filter_input(INPUT_GET, 'tab', FILTER_DEFAULT) ?? 'campanas';
                     <div>
                         <h2>Diagnóstico Automático</h2>
                         <p class="section-desc">Alertas generadas automáticamente a partir de los datos</p>
+                    </div>
+                    <div class="header-controls" style="margin-left:auto;">
+                        <select id="diagFilter" onchange="renderDiagnostics()">
+                            <option value="all">Todas las plataformas</option>
+                            <option value="meta">Solo Meta</option>
+                            <option value="google">Solo Google</option>
+                            <option value="cross">Cross-platform</option>
+                        </select>
                     </div>
                 </div>
                 <div id="diagnostics" class="diagnostic-grid"></div>
