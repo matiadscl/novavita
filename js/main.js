@@ -284,7 +284,7 @@ function svgFunnel(stages) {
 
 function getFunnelData() {
     const platform = getPlatform();
-    const f = { imp: 0, clk: 0, land: 0, atc: 0, co: 0, pur: 0, spend: 0 };
+    const f = { imp: 0, clk: 0, land: 0, atc: 0, co: 0, pur: 0, spend: 0, revenue: 0 };
 
     if (platform === 'all' || platform === 'meta') {
         getFilteredMetaCampaigns().forEach(c => {
@@ -299,8 +299,13 @@ function getFunnelData() {
         getFilteredGoogleCampaigns().forEach(c => {
             f.imp += c.total_impressions || 0; f.clk += c.total_clicks || 0;
             f.pur += c.total_conversions || 0; f.spend += c.total_spend || 0;
+            f.revenue += c.total_conv_value || 0;
         });
     }
+
+    // Add Shopify revenue
+    const shopRevenue = SDATA.summary?.total_revenue || 0;
+    if (shopRevenue > f.revenue) f.revenue = shopRevenue;
 
     return f;
 }
@@ -314,11 +319,11 @@ function renderFunnel() {
 
     let stages;
     if (platform === 'google') {
-        // Google no tiene landing/atc/checkout data
         stages = [
             { l: 'Impresiones', f: num(f.imp), col: '#4fc3f7', pct: null },
             { l: 'Clics', f: num(f.clk), col: '#2196f3', pct: r(f.clk, f.imp) },
             { l: 'Conversiones', f: num(f.pur), col: '#10b981', pct: r(f.pur, f.clk) },
+            { l: 'Ingresos', f: clp(f.revenue), col: '#6f42c1', pct: null },
         ];
     } else {
         stages = [
@@ -328,10 +333,12 @@ function renderFunnel() {
             { l: 'Agregar al carrito', f: num(f.atc), col: '#f59e0b', pct: r(f.atc, f.land) },
             { l: 'Iniciar checkout', f: num(f.co), col: '#fd7e14', pct: r(f.co, f.atc) },
             { l: 'Conversiones', f: num(f.pur), col: '#10b981', pct: r(f.pur, f.co) },
+            { l: 'Ingresos', f: clp(f.revenue), col: '#6f42c1', pct: null },
         ];
     }
 
     const overall = f.imp > 0 ? (f.pur / f.imp * 100).toFixed(3) : '0';
+    const roas = f.spend > 0 ? (f.revenue / f.spend).toFixed(2) : '0';
     const platformLabel = platform === 'google' ? 'Google Ads' : platform === 'meta' ? 'Meta Ads' : 'Meta + Google';
 
     el.innerHTML = `<div class="funnel-layout">
@@ -342,6 +349,8 @@ function renderFunnel() {
             ${platform !== 'google' ? `<div class="funnel-stat"><span class="funnel-stat-val">${r(f.atc,f.land)}</span><span class="funnel-stat-lbl">Landing a Carrito</span><span class="funnel-stat-desc">Interés de compra</span></div>` : ''}
             ${platform !== 'google' ? `<div class="funnel-stat"><span class="funnel-stat-val">${r(f.pur,f.co)}</span><span class="funnel-stat-lbl">Checkout a Compra</span><span class="funnel-stat-desc">Cierre</span></div>` : ''}
             <div class="funnel-stat"><span class="funnel-stat-val">${f.pur > 0 ? clp(f.spend/f.pur) : '-'}</span><span class="funnel-stat-lbl">CPA</span><span class="funnel-stat-desc">Costo por conversión</span></div>
+            <div class="funnel-stat"><span class="funnel-stat-val">${clp(f.revenue)}</span><span class="funnel-stat-lbl">Ingresos</span><span class="funnel-stat-desc">Revenue Shopify</span></div>
+            <div class="funnel-stat"><span class="funnel-stat-val">${roas}x</span><span class="funnel-stat-lbl">ROAS</span><span class="funnel-stat-desc">Retorno sobre inversión publicitaria</span></div>
             <div class="funnel-stat"><span class="funnel-stat-val">${clp(f.spend)}</span><span class="funnel-stat-lbl">Inversión</span><span class="funnel-stat-desc">Periodo seleccionado</span></div>
         </div></div>`;
 }
