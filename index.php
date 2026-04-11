@@ -793,6 +793,21 @@ $tab = filter_input(INPUT_GET, 'tab', FILTER_DEFAULT) ?? 'campanas';
             <?php endif; ?>
         </main>
     </div>
+    <!-- Mobile bottom navigation -->
+    <nav class="mobile-nav">
+        <a href="?tab=campanas" class="<?php echo $tab === 'campanas' ? 'active' : ''; ?>">
+            <span class="mnav-icon">&#x1f4ca;</span>Campañas
+        </a>
+        <a href="?tab=estrategia" class="<?php echo $tab === 'estrategia' ? 'active' : ''; ?>">
+            <span class="mnav-icon">&#x1f3af;</span>Estrategia
+        </a>
+        <a href="?tab=duenos" class="<?php echo $tab === 'duenos' ? 'active' : ''; ?>">
+            <span class="mnav-icon">&#x1f4cb;</span>Due&ntilde;os
+        </a>
+        <a href="logout.php">
+            <span class="mnav-icon">&#x2190;</span>Salir
+        </a>
+    </nav>
     <script src="js/main.js"></script>
 </body>
 </html>
