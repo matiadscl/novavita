@@ -11,7 +11,7 @@ $tab = filter_input(INPUT_GET, 'tab', FILTER_DEFAULT) ?? 'campanas';
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dashboard - Novavita Clínica & Spa</title>
-    <link rel="stylesheet" href="css/styles.css?v=2">
+    <link rel="stylesheet" href="css/styles.css?v=3">
 </head>
 <body>
     <div class="layout">
@@ -808,7 +808,7 @@ $tab = filter_input(INPUT_GET, 'tab', FILTER_DEFAULT) ?? 'campanas';
             <span class="mnav-icon">&#x2190;</span>Salir
         </a>
     </nav>
-    <script src="js/main.js?v=2"></script>
+    <script src="js/main.js?v=3"></script>
 </body>
 </html>
 <!-- deploy test -->

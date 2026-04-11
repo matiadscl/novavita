@@ -263,20 +263,20 @@ async function loadCampaignDetail(id, name) {
 
 function svgFunnel(stages) {
     if (!stages || !stages.length) return '';
-    const W = 650, SH = 68, GAP = 4, MAXW = W - 60, MINW = 100;
+    const W = 500, SH = 60, GAP = 3, MAXW = W - 40, MINW = 80;
     const n = stages.length, step = (MAXW - MINW) / (n - 1 || 1);
     const H = n * SH + (n - 1) * GAP;
-    let o = `<svg viewBox="0 0 ${W} ${H}" width="100%" xmlns="http://www.w3.org/2000/svg" style="max-width:${W}px;display:block;margin:0 auto">`;
+    let o = `<svg viewBox="0 0 ${W} ${H}" width="100%" xmlns="http://www.w3.org/2000/svg" style="display:block;margin:0 auto">`;
     o += `<defs><filter id="sh"><feDropShadow dx="0" dy="2" stdDeviation="3" flood-opacity=".18"/></filter></defs>`;
     stages.forEach((s, i) => {
         const tW = MAXW - i * step, bW = Math.max(MINW, MAXW - (i + 1) * step);
         const tX = (W - tW) / 2, bX = (W - bW) / 2, y = i * (SH + GAP);
         o += `<polygon points="${tX},${y} ${tX+tW},${y} ${bX+bW},${y+SH} ${bX},${y+SH}" fill="${s.col}" filter="url(#sh)"/>`;
         const cy = y + SH / 2;
-        o += `<text x="${W/2}" y="${cy-10}" text-anchor="middle" fill="white" font-size="11" font-weight="700" font-family="-apple-system,Segoe UI,Arial">${s.l}</text>`;
-        o += `<text x="${W/2}" y="${cy+10}" text-anchor="middle" fill="rgba(255,255,255,.95)" font-size="16" font-weight="800" font-family="-apple-system,Segoe UI,Arial">${s.f}</text>`;
+        o += `<text x="${W/2}" y="${cy-8}" text-anchor="middle" fill="white" font-size="10" font-weight="700" font-family="-apple-system,Segoe UI,Arial">${s.l}</text>`;
+        o += `<text x="${W/2}" y="${cy+9}" text-anchor="middle" fill="rgba(255,255,255,.95)" font-size="14" font-weight="800" font-family="-apple-system,Segoe UI,Arial">${s.f}</text>`;
         if (s.pct !== null && i > 0) {
-            o += `<text x="${(W+tW)/2+12}" y="${y+18}" fill="#9aa0b0" font-size="11" font-family="-apple-system,Segoe UI,Arial" font-weight="600">${s.pct}</text>`;
+            o += `<text x="${(W+tW)/2+8}" y="${y+15}" fill="#9aa0b0" font-size="9" font-family="-apple-system,Segoe UI,Arial" font-weight="600">${s.pct}</text>`;
         }
     });
     return o + '</svg>';
