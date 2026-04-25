@@ -1,0 +1,117 @@
+{# ===========================================================================
+   TEMPLATE KLAVIYO — Email al destinatario de un regalo Novavita
+
+   Trigger: Placed Order (integración Shopify)
+   Flow Filter: at least one line_item has property 'Regalo para' is not empty
+   Dynamic Recipient: usar el bloque "Dynamic send-to email" en la action Email
+     con el valor:
+     {% for item in event.extra.line_items %}{% if item.properties['Regalo para'] and item.properties['Regalo para'] != '' %}{{ item.properties['Email del destinatario'] }}{% endif %}{% endfor %}
+
+   Este template itera los line_items y usa el PRIMERO que tiene _es_regalo=si.
+   Si la orden tiene varios regalos con distintos destinatarios, solo el
+   primero recibe email (edge case, iterar después si hace falta).
+
+   Variables Klaviyo usadas:
+     event.extra.line_items          → array de items
+     event.extra.name                → "#1542" (order name)
+     item.properties['clave']        → line item property
+     item.title                      → nombre del producto
+     item.id                         → line item id (para el código de canje)
+   =========================================================================== #}
+
+{% for item in event.extra.line_items %}
+{% if item.properties['Regalo para'] and item.properties['Regalo para'] != '' %}
+
+{% assign destinatario = item.properties['Regalo para'] %}
+{% assign de_parte_de  = item.properties['De parte de'] %}
+{% assign producto     = item.title %}
+{% assign mensaje      = item.properties['Mensaje'] %}
+{% assign codigo       = event.extra.name %}-{{ item.id }}
+{% assign wa_text      = 'Hola, vengo a canjear un regalo. Código: ' | append: codigo | url_encode %}
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Tu regalo de Novavita</title>
+</head>
+<body style="margin:0;padding:0;background:#f5f3ef;font-family:Arial,Helvetica,sans-serif;color:#2a2a2a;">
+<table width="100%" cellspacing="0" cellpadding="0" border="0" style="background:#f5f3ef;">
+<tr><td align="center" style="padding:32px 16px;">
+<table width="560" cellspacing="0" cellpadding="0" border="0" style="max-width:560px;width:100%;background:#ffffff;border-radius:14px;overflow:hidden;box-shadow:0 4px 20px rgba(0,0,0,0.06);">
+
+  <!-- HEADER -->
+  <tr><td style="background:#1a1a1a;padding:24px;text-align:center;">
+    <span style="color:#ffffff;font-size:20px;letter-spacing:2px;font-weight:600;">NOVAVITA</span>
+  </td></tr>
+
+  <!-- BODY -->
+  <tr><td style="padding:36px 32px 8px;">
+    <div style="font-size:44px;line-height:1;margin-bottom:12px;">🎁</div>
+    <h1 style="margin:0 0 16px;font-size:24px;font-weight:600;color:#1a1a1a;">
+      Tienes un regalo, {{ destinatario }}
+    </h1>
+    <p style="margin:0 0 18px;font-size:15px;line-height:1.6;color:#444;">
+      <strong>{{ de_parte_de }}</strong> te regaló un <strong>{{ producto }}</strong> en Novavita.
+    </p>
+
+    {% if mensaje %}
+    <table width="100%" cellspacing="0" cellpadding="0" border="0" style="margin:0 0 24px;">
+      <tr><td style="background:#faf7f2;border-left:3px solid #c9a961;padding:16px 18px;border-radius:6px;">
+        <p style="margin:0;font-size:14px;line-height:1.55;color:#555;font-style:italic;">"{{ mensaje }}"</p>
+      </td></tr>
+    </table>
+    {% endif %}
+
+    <!-- CÓDIGO DE CANJE -->
+    <table width="100%" cellspacing="0" cellpadding="0" border="0" style="margin:0 0 24px;">
+      <tr><td style="background:#1a1a1a;padding:20px;border-radius:10px;text-align:center;">
+        <div style="font-size:11px;letter-spacing:2px;color:#c9a961;margin-bottom:6px;">CÓDIGO DE CANJE</div>
+        <div style="font-size:20px;font-weight:600;color:#ffffff;letter-spacing:1px;">{{ codigo }}</div>
+      </td></tr>
+    </table>
+
+    <p style="margin:0 0 8px;font-size:15px;line-height:1.6;color:#444;">
+      <strong>Para agendar tu cita</strong>, escríbenos por WhatsApp con tu código:
+    </p>
+
+    <!-- CTA WhatsApp -->
+    <table cellspacing="0" cellpadding="0" border="0" style="margin:0 0 24px;">
+      <tr><td style="background:#25d366;border-radius:8px;">
+        <a href="https://wa.me/56996114390?text={{ wa_text }}"
+           style="display:inline-block;padding:14px 26px;color:#ffffff;text-decoration:none;font-size:15px;font-weight:600;">
+          Escribir por WhatsApp
+        </a>
+      </td></tr>
+    </table>
+    <p style="margin:0 0 24px;font-size:13px;line-height:1.5;color:#777;">
+      +56 9 9611 4390 — coordinamos día y hora en nuestro local de Curicó.
+    </p>
+
+    <!-- TÉRMINOS -->
+    <hr style="border:0;border-top:1px solid #eee;margin:12px 0 18px;">
+    <p style="margin:0 0 8px;font-size:12px;font-weight:600;color:#888;letter-spacing:1px;">TÉRMINOS DEL REGALO</p>
+    <ul style="margin:0 0 12px;padding-left:20px;font-size:12px;line-height:1.6;color:#666;">
+      <li>Vigencia: <strong>3 meses</strong> desde la fecha de compra.</li>
+      <li>Transferible únicamente como producto completo. Si ya tomaste una sesión, el saldo queda a tu nombre.</li>
+      <li>Reagendamiento gratuito avisando con 24 horas de anticipación.</li>
+    </ul>
+  </td></tr>
+
+  <!-- FOOTER -->
+  <tr><td style="background:#faf7f2;padding:20px 32px;text-align:center;border-top:1px solid #eee;">
+    <p style="margin:0 0 4px;font-size:13px;color:#555;">Te esperamos en Novavita 💆‍♀️</p>
+    <p style="margin:0;font-size:12px;color:#999;">
+      <a href="https://novavita.cl" style="color:#999;text-decoration:none;">novavita.cl</a> · Curicó, Chile
+    </p>
+  </td></tr>
+
+</table>
+</td></tr>
+</table>
+</body>
+</html>
+
+{% break %}
+{% endif %}
+{% endfor %}

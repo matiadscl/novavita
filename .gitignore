@@ -1,0 +1,19 @@
+venv/
+__pycache__/
+*.pyc
+.env
+*.db
+*.db-journal
+downloads/
+assets/Material*
+*.zip
+*.mp4
+*.mov
+*.mp3
+*.ogg
+node_modules/
+.DS_Store
+
+# One-shot scripts with hardcoded Shopify tokens (already executed)
+scripts/
+theme_copia_fabric/

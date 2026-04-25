@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<title>Vista Previa — Backup Novavita 15/04/2026</title>
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background: #f5f5f5; color: #333; }
+.banner { background: linear-gradient(135deg, #2c3e50, #8e44ad); color: white; padding: 30px; text-align: center; }
+.banner h1 { font-size: 24px; margin-bottom: 5px; }
+.banner p { opacity: 0.8; font-size: 14px; }
+.banner .warning { background: rgba(255,255,255,0.15); border-radius: 8px; padding: 12px; margin-top: 15px; font-size: 13px; }
+.container { max-width: 1200px; margin: 0 auto; padding: 20px; }
+.stats { display: grid; grid-template-columns: repeat(4, 1fr); gap: 15px; margin-bottom: 25px; }
+.stat { background: white; border-radius: 10px; padding: 20px; text-align: center; box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+.stat .num { font-size: 32px; font-weight: 700; color: #8e44ad; }
+.stat .label { font-size: 12px; color: #888; margin-top: 4px; }
+.section { background: white; border-radius: 10px; padding: 20px; margin-bottom: 20px; box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+.section h2 { font-size: 16px; color: #2c3e50; border-bottom: 2px solid #8e44ad; padding-bottom: 8px; margin-bottom: 15px; }
+.section h3 { font-size: 14px; color: #555; margin: 15px 0 8px 0; }
+.grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 12px; }
+.card { border: 1px solid #eee; border-radius: 8px; padding: 12px; font-size: 12px; }
+.card .title { font-weight: 600; color: #2c3e50; margin-bottom: 4px; }
+.card .price { color: #8e44ad; font-weight: 700; }
+.card .meta { color: #999; font-size: 11px; margin-top: 4px; }
+.card img { width: 100%; height: 120px; object-fit: cover; border-radius: 6px; margin-bottom: 8px; }
+.tag { display: inline-block; padding: 2px 8px; border-radius: 12px; font-size: 10px; font-weight: 600; }
+.tag-pub { background: #e8f5e9; color: #2e7d32; }
+.tag-unpub { background: #fce4ec; color: #c62828; }
+.tag-draft { background: #fff3e0; color: #e65100; }
+.tag-archived { background: #eceff1; color: #546e6f; }
+.col-list { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 10px; }
+.col-item { border: 1px solid #eee; border-radius: 8px; padding: 10px 14px; font-size: 13px; display: flex; justify-content: space-between; align-items: center; }
+.col-item .name { font-weight: 600; }
+.page-list { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 10px; }
+.page-item { border: 1px solid #eee; border-radius: 8px; padding: 10px 14px; font-size: 13px; display: flex; justify-content: space-between; align-items: center; }
+.page-item .name { font-weight: 600; }
+</style>
+</head>
+<body>
+<div class="banner">
+    <h1>Vista Previa — Backup Novavita</h1>
+    <p>Estado del sitio al 15 de abril de 2026, 23:17 hrs (antes de cambios)</p>
+    <div class="warning">
+        Este es el estado al que se restaurará el sitio. Revisa que todo esté correcto antes de confirmar.
+    </div>
+</div>
+<div class="container">
+
+<div class="stats">
+    <div class="stat"><div class="num">149</div><div class="label">Productos Activos</div></div>
+    <div class="stat"><div class="num">43</div><div class="label">Productos Draft</div></div>
+    <div class="stat"><div class="num">40</div><div class="label">Colecciones Publicadas</div></div>
+    <div class="stat"><div class="num">15</div><div class="label">Páginas Publicadas</div></div>
+</div>
+
+<div class="section">
+<h2>Colecciones (42 total)</h2>
+<div class="col-list">
+<div class="col-item"><span class="name">Bodyter</span><span class="tag tag-pub">Publicada</span></div>
+<div class="col-item"><span class="name">Cabello</span><span class="tag tag-pub">Publicada</span></div>
+<div class="col-item"><span class="name">Cremas Dermaceuticals</span><span class="tag tag-pub">Publicada</span></div>
+<div class="col-item"><span class="name">Cuidado Facial</span><span class="tag tag-pub">Publicada</span></div>
+<div class="col-item"><span class="name">Depilación Láser Hombres</span><span class="tag tag-pub">Publicada</span></div>
+<div class="col-item"><span class="name">Depilación Láser Mujeres</span><span class="tag tag-pub">Publicada</span></div>
+<div class="col-item"><span class="name">Depilación Láser zonas individuales hombre</span><span class="tag tag-pub">Publicada</span></div>
+<div class="col-item"><span class="name">Depilación Láser zonas individuales mujer</span><span class="tag tag-pub">Publicada</span></div>
+<div class="col-item"><span class="name">Dermaceuticals</span><span class="tag tag-pub">Publicada</span></div>
+<div class="col-item"><span class="name">Dermapen World</span><span class="tag tag-pub">Publicada</span></div>
+<div class="col-item"><span class="name">EndyFace</span><span class="tag tag-pub">Publicada</span></div>
+<div class="col-item"><span class="name">Endybody</span><span class="tag tag-pub">Publicada</span></div>
+<div class="col-item"><span class="name">Exocobio</span><span class="tag tag-pub">Publicada</span></div>
+<div class="col-item"><span class="name">Face Gym</span><span class="tag tag-pub">Publicada</span></div>
+<div class="col-item"><span class="name">Feliz día Mamá</span><span class="tag tag-pub">Publicada</span></div>
+<div class="col-item"><span class="name">Flash⚡Sale</span><span class="tag tag-pub">Publicada</span></div>
+<div class="col-item"><span class="name">Gift Card</span><span class="tag tag-pub">Publicada</span></div>
+<div class="col-item"><span class="name">Gift Card | Masajes</span><span class="tag tag-pub">Publicada</span></div>
+<div class="col-item"><span class="name">Gift Card | Mix</span><span class="tag tag-pub">Publicada</span></div>
+<div class="col-item"><span class="name">Limpiezas Faciales</span><span class="tag tag-pub">Publicada</span></div>
+<div class="col-item"><span class="name">Más Vendidos</span><span class="tag tag-pub">Publicada</span></div>
+<div class="col-item"><span class="name">Night Flash Sale ✨</span><span class="tag tag-unpub">No publicada</span></div>
+<div class="col-item"><span class="name">Novavita Teen</span><span class="tag tag-pub">Publicada</span></div>
+<div class="col-item"><span class="name">Packs Hombre</span><span class="tag tag-pub">Publicada</span></div>
+<div class="col-item"><span class="name">Packs Mujer</span><span class="tag tag-pub">Publicada</span></div>
+<div class="col-item"><span class="name">Packs Soprano</span><span class="tag tag-pub">Publicada</span></div>
+<div class="col-item"><span class="name">Peelings</span><span class="tag tag-pub">Publicada</span></div>
+<div class="col-item"><span class="name">Rostro Hombre</span><span class="tag tag-pub">Publicada</span></div>
+<div class="col-item"><span class="name">Rostro Mujer</span><span class="tag tag-pub">Publicada</span></div>
+<div class="col-item"><span class="name">Scizer</span><span class="tag tag-pub">Publicada</span></div>
+<div class="col-item"><span class="name">Servicio Spa</span><span class="tag tag-pub">Publicada</span></div>
+<div class="col-item"><span class="name">Sin categorizar</span><span class="tag tag-unpub">No publicada</span></div>
+<div class="col-item"><span class="name">Skin Center</span><span class="tag tag-pub">Publicada</span></div>
+<div class="col-item"><span class="name">Tratamientos Corporales</span><span class="tag tag-pub">Publicada</span></div>
+<div class="col-item"><span class="name">Tratamientos Faciales</span><span class="tag tag-pub">Publicada</span></div>
+<div class="col-item"><span class="name">Tren Inferior Hombre</span><span class="tag tag-pub">Publicada</span></div>
+<div class="col-item"><span class="name">Tren Inferior Mujer</span><span class="tag tag-pub">Publicada</span></div>
+<div class="col-item"><span class="name">Tren Superior Hombre</span><span class="tag tag-pub">Publicada</span></div>
+<div class="col-item"><span class="name">Tren Superior Mujer</span><span class="tag tag-pub">Publicada</span></div>
+<div class="col-item"><span class="name">Acné (smart)</span><span class="tag tag-pub">Publicada</span></div>
+<div class="col-item"><span class="name">Anti Edad (smart)</span><span class="tag tag-pub">Publicada</span></div>
+<div class="col-item"><span class="name">Foliculitis (smart)</span><span class="tag tag-pub">Publicada</span></div>
+</div></div>
+
+<div class="section">
+<h2>Páginas (24 total)</h2>
+<div class="page-list">
+<div class="page-item"><span class="name">Acné</span><span class="tag tag-pub">Publicada</span></div>
+<div class="page-item"><span class="name">Black Sale</span><span class="tag tag-unpub">No publicada</span></div>
+<div class="page-item"><span class="name">Bodyter</span><span class="tag tag-pub">Publicada</span></div>
+<div class="page-item"><span class="name">Contacto</span><span class="tag tag-pub">Publicada</span></div>
+<div class="page-item"><span class="name">Cuidado Facial</span><span class="tag tag-unpub">No publicada</span></div>
+<div class="page-item"><span class="name">Depilación Láser</span><span class="tag tag-pub">Publicada</span></div>
+<div class="page-item"><span class="name">Depilación Láser Hombre</span><span class="tag tag-pub">Publicada</span></div>
+<div class="page-item"><span class="name">Depilación Láser Mujer</span><span class="tag tag-pub">Publicada</span></div>
+<div class="page-item"><span class="name">Endybody</span><span class="tag tag-pub">Publicada</span></div>
+<div class="page-item"><span class="name">Especial Septiembre</span><span class="tag tag-unpub">No publicada</span></div>
+<div class="page-item"><span class="name">Feliz día Mamá</span><span class="tag tag-pub">Publicada</span></div>
+<div class="page-item"><span class="name">Foliculitis: Causas, Síntomas y Tratamientos</span><span class="tag tag-unpub">No publicada</span></div>
+<div class="page-item"><span class="name">Guía de Tratamientos</span><span class="tag tag-unpub">No publicada</span></div>
+<div class="page-item"><span class="name">Hirsutismo</span><span class="tag tag-pub">Publicada</span></div>
+<div class="page-item"><span class="name">Home</span><span class="tag tag-unpub">No publicada</span></div>
+<div class="page-item"><span class="name">Lanzamiento</span><span class="tag tag-unpub">No publicada</span></div>
+<div class="page-item"><span class="name">Lista de deseos</span><span class="tag tag-pub">Publicada</span></div>
+<div class="page-item"><span class="name">Packs Soprano Titanium</span><span class="tag tag-pub">Publicada</span></div>
+<div class="page-item"><span class="name">Próximamente</span><span class="tag tag-unpub">No publicada</span></div>
+<div class="page-item"><span class="name">Spa & Masajes</span><span class="tag tag-pub">Publicada</span></div>
+<div class="page-item"><span class="name">Tratamientos Corporales</span><span class="tag tag-pub">Publicada</span></div>
+<div class="page-item"><span class="name">Tratamientos Faciales</span><span class="tag tag-pub">Publicada</span></div>
+<div class="page-item"><span class="name">Términos y Condiciones</span><span class="tag tag-pub">Publicada</span></div>
+<div class="page-item"><span class="name">Verano</span><span class="tag tag-unpub">No publicada</span></div>
+</div></div>
+<div class="section"><h2>Productos Activos por Categoría (149 total)</h2>
+<h3>Sin tipo (149 productos)</h3>
+<div class="grid">
+<div class="card">
+<img src="https://cdn.shopify.com/s/files/1/0607/2074/2505/files/soothing-gel-mask-asce.png?v=1770076113" alt="" loading="lazy">
+<div class="title">ASCE+ Soothing Gel Mask – Mascarilla Calmante con Exosomas de Rosa | Caja x3</div>
+<div class="price">$37.990</div>
+<div class="meta"></div>
+</div>
+<div class="card">
+<img src="https://cdn.shopify.com/s/files/1/0607/2074/2505/files/img_6981.jpg?v=1770076102" alt="" loading="lazy">
+<div class="title">Abdomen (Pack 3 Sesiones)</div>
+<div class="price">$776.000</div>
+<div class="meta"></div>
+</div>
+<div class="card">
+<img src="https://cdn.shopify.com/s/files/1/0607/2074/2505/files/img_6981_ae5d7a54-3d88-415d-b272-429eeff5792c.jpg?v=1770076176" alt="" loading="lazy">
+<div class="title">Abdomen Inferior (Pack 3 Sesiones)</div>
+<div class="price">$650.000</div>
+<div class="meta"></div>
+</div>
+<div class="card">
+<img src="https://cdn.shopify.com/s/files/1/0607/2074/2505/files/Abdomen.png?v=1770075835" alt="" loading="lazy">
+<div class="title">Abdomen completo 6 Sesiones Hombre</div>
+<div class="price">$153.000</div>
+<div class="meta"></div>
+</div>
+<div class="card">
+<img src="https://cdn.shopify.com/s/files/1/0607/2074/2505/files/Abdomen-Completo.png?v=1770076444" alt="" loading="lazy">
+<div class="title">Abdomen completo 6 Sesiones Mujer</div>
+<div class="price">$144.000</div>
+<div class="meta"></div>
+</div>
+<div class="card">
+<img src="https://cdn.shopify.com/s/files/1/0607/2074/2505/files/Antebrazos.png?v=1770075958" alt="" loading="lazy">
+<div class="title">Antebrazos 6 Sesiones Hombre</div>
+<div class="price">$147.600</div>
+<div class="meta"></div>
+</div>
+<div class="card">
+<img src="https://cdn.shopify.com/s/files/1/0607/2074/2505/files/Antebrazos_2aac79fe-8976-41e2-bc8a-651f432828de.png?v=1770076448" alt="" loading="lazy">
+<div class="title">Antebrazos 6 Sesiones Mujer</div>
+<div class="price">$125.350</div>
+<div class="meta"></div>
+</div>
+<div class="card">
+<img src="https://cdn.shopify.com/s/files/1/0607/2074/2505/files/Antioxidant.png?v=1770076206" alt="" loading="lazy">
+<div class="title">Antioxidant Cocktail – Sérum Revitalizante Antioxidante 50 ml</div>
+<div class="price">$95.000</div>
+<div class="meta"></div>
+</div>
+<div class="card">
+<img src="https://cdn.shopify.com/s/files/1/0607/2074/2505/files/Areolas-de-pezon.png?v=1770075948" alt="" loading="lazy">
+<div class="title">Areolas de Pezón 6 Sesiones Hombre</div>
+<div class="price">$80.800</div>
+<div class="meta"></div>
+</div>
+<div class="card">
+<img src="https://cdn.shopify.com/s/files/1/0607/2074/2505/files/Areolas-del-Pezon.png?v=1770076452" alt="" loading="lazy">
+<div class="title">Areolas del Pezón 6 Sesiones Mujer</div>
+<div class="price">$72.720</div>
+<div class="meta"></div>
+</div>
+<div class="card">
+<img src="https://cdn.shopify.com/s/files/1/0607/2074/2505/files/Axilas.png?v=1770075830" alt="" loading="lazy">
+<div class="title">Axilas 6 Sesiones Hombre</div>
+<div class="price">$76.500</div>
+<div class="meta"></div>
+</div>
+<div class="card">
+<img src="https://cdn.shopify.com/s/files/1/0607/2074/2505/files/Axilas_2d2cd73e-39a3-4ec5-9cbd-76635a8bc2d0.png?v=1770076457" alt="" loading="lazy">
+<div class="title">Axilas 6 Sesiones Mujer</div>
+<div class="price">$85.000</div>
+<div class="meta"></div>
+</div>
+<div class="card">
+<img src="https://cdn.shopify.com/s/files/1/0607/2074/2505/files/Barba-Completa.png?v=1770075995" alt="" loading="lazy">
+<div class="title">Barba Completa (6) Sesiones Hombre</div>
+<div class="price">$198.000</div>
+<div class="meta"></div>
+</div>
+<div class="card">
+<img src="https://cdn.shopify.com/s/files/1/0607/2074/2505/files/Bozo-1.png?v=1770075886" alt="" loading="lazy">
+<div class="title">Bozo 6 Sesiones Hombre</div>
+<div class="price">$72.000</div>
+<div class="meta"></div>
+</div>
+<div class="card">
+<img src="https://cdn.shopify.com/s/files/1/0607/2074/2505/files/Bozo.png?v=1770076516" alt="" loading="lazy">
+<div class="title">Bozo 6 Sesiones Mujer</div>
+<div class="price">$75.000</div>
+<div class="meta"></div>
+</div>
+<div class="card">
+<img src="https://cdn.shopify.com/s/files/1/0607/2074/2505/files/Brazos-completos.png?v=1770075990" alt="" loading="lazy">
+<div class="title">Brazos Completos 6 Sesiones Hombre</div>
+<div class="price">$225.000</div>
+<div class="meta"></div>
+</div>
+<div class="card">
+<img src="https://cdn.shopify.com/s/files/1/0607/2074/2505/files/Brazos-completos_21ab5b33-b058-4d2c-b9c2-54fe0d7404cf.png?v=1770076465" alt="" loading="lazy">
+<div class="title">Brazos Completos 6 Sesiones Mujer</div>
+<div class="price">$217.800</div>
+<div class="meta"></div>
+</div>
+<div class="card">
+<img src="https://cdn.shopify.com/s/files/1/0607/2074/2505/files/Brazos.png?v=1770076327" alt="" loading="lazy">
+<div class="title">Brazos Superior 6 Sesiones Hombre</div>
+<div class="price">$178.650</div>
+<div class="meta"></div>
+</div>
+<div class="card">
+<img src="https://cdn.shopify.com/s/files/1/0607/2074/2505/files/Brite-Lite-1.png?v=1770076215" alt="" loading="lazy">
+<div class="title">Brite Lite – Sérum Despigmentante y Corrector 50 ml</div>
+<div class="price">$95.000</div>
+<div class="meta"></div>
+</div>
+<div class="card">
+<img src="https://cdn.shopify.com/s/files/1/0607/2074/2505/files/Cliniprep.png?v=1770076106" alt="" loading="lazy">
+<div class="title">CLINIPREP+ 180 ml</div>
+<div class="price">$65.000</div>
+<div class="meta"></div>
+</div>
+<div class="card">
+<img src="https://cdn.shopify.com/s/files/1/0607/2074/2505/files/img_7632.jpg?v=1770076119" alt="" loading="lazy">
+<div class="title">Calm in Balm – Bálsamo Limpiador Calmante 50 ml</div>
+<div class="price">$24.900</div>
+<div class="meta"></div>
+</div>
+<div class="card">
+<img src="https://cdn.shopify.com/s/files/1/0607/2074/2505/files/img_6981_50373b61-8481-4363-a431-21e90e98bbdb.jpg?v=1770076183" alt="" loading="lazy">
+<div class="title">Cartucheras (Pack 3 Sesiones)</div>
+<div class="price">$776.000</div>
+<div class="meta"></div>
+</div>
+<div class="card">
+<img src="https://cdn.shopify.com/s/files/1/0607/2074/2505/files/Cover-Recover_E2_84_A2.png?v=1770076055" alt="" loading="lazy">
+<div class="title">Cover Recover Sheer SPF 30 – Dp Dermaceuticals | Base Reparadora con Protección Solar 50 ml</div>
+<div class="price">$75.000</div>
+<div class="meta"></div>
+</div>
+<div class="card">
+<img src="https://cdn.shopify.com/s/files/1/0607/2074/2505/files/Cuello-completo.png?v=1770075840" alt="" loading="lazy">
+<div class="title">Cuello completo 6 Sesiones Hombre</div>
+<div class="price">$201.600</div>
+<div class="meta"></div>
+</div>
+<div class="card">
+<img src="https://cdn.shopify.com/s/files/1/0607/2074/2505/files/Cuello-completo_60750113-bf55-4dba-a245-ed062344108f.png?v=1770076469" alt="" loading="lazy">
+<div class="title">Cuello completo 6 Sesiones Mujer</div>
+<div class="price">$178.350</div>
+<div class="meta"></div>
+</div>
+<div class="card">
+<img src="https://cdn.shopify.com/s/files/1/0607/2074/2505/files/Cuello-interior.png?v=1770075848" alt="" loading="lazy">
+<div class="title">Cuello interior 6 Sesiones Hombre</div>
+<div class="price">$112.500</div>
+<div class="meta"></div>
+</div>
+<div class="card">
+<img src="https://cdn.shopify.com/s/files/1/0607/2074/2505/files/Cuello-interior_c6a08319-f421-4edd-af85-d911e082a80e.png?v=1770076474" alt="" loading="lazy">
+<div class="title">Cuello interior 6 Sesiones Mujer</div>
+<div class="price">$98.350</div>
+<div class="meta"></div>
+</div>
+<div class="card">
+<img src="https://cdn.shopify.com/s/files/1/0607/2074/2505/files/Cuello-posterior.png?v=1770075854" alt="" loading="lazy">
+<div class="title">Cuello posterior 6 Sesiones Hombre</div>
+<div class="price">$120.600</div>
+<div class="meta"></div>
+</div>
+<div class="card">
+<img src="https://cdn.shopify.com/s/files/1/0607/2074/2505/files/Cuello-posterior_d3707bc1-73f3-4818-a4e2-d85d8234aad1.png?v=1770076478" alt="" loading="lazy">
+<div class="title">Cuello posterior 6 Sesiones Mujer</div>
+<div class="price">$98.350</div>
+<div class="meta"></div>
+</div>
+<div class="card">
+<img src="https://cdn.shopify.com/s/files/1/0607/2074/2505/files/Dedos-de-manos.png?v=1770075916" alt="" loading="lazy">
+<div class="title">Dedos de manos 6 Sesiones Hombre</div>
+<div class="price">$37.500</div>
+<div class="meta"></div>
+</div>
+<div class="card">
+<img src="https://cdn.shopify.com/s/files/1/0607/2074/2505/files/Dedos-de-manos_dc8ee630-aa10-4049-9559-32352e851c8f.png?v=1770076482" alt="" loading="lazy">
+<div class="title">Dedos de manos 6 Sesiones Mujer</div>
+<div class="price">$65.000</div>
+<div class="meta"></div>
+</div>
+<div class="card">
+<img src="https://cdn.shopify.com/s/files/1/0607/2074/2505/files/Dedos-de-pies.png?v=1770075921" alt="" loading="lazy">
+<div class="title">Dedos de pies 6 Sesiones Hombre</div>
+<div class="price">$37.500</div>
+<div class="meta"></div>
+</div>
+<div class="card">
+<img src="https://cdn.shopify.com/s/files/1/0607/2074/2505/files/Dedos-de-Pies-Mujer.png?v=1770076560" alt="" loading="lazy">
+<div class="title">Dedos de pies 6 Sesiones Mujer</div>
+<div class="price">$62.500</div>
+<div class="meta"></div>
+</div>
+<div class="card">
+<img src="https://cdn.shopify.com/s/files/1/0607/2074/2505/files/Dp-Anti-Edad.png?v=1770076425" alt="" loading="lazy">
+<div class="title">Dermapen 4 Antiedad – Rejuvenecimiento y Bioestimulación Avanzada</div>
+<div class="price">$160.000</div>
+<div class="meta"></div>
+</div>
+<div class="card">
+<img src="https://cdn.shopify.com/s/files/1/0607/2074/2505/files/Dp-Cicatrices-de-Acne.png?v=1770076421" alt="" loading="lazy">
+<div class="title">Dermapen 4 Cicatrices de Acné – Remodelación Dérmica Profunda</div>
+<div class="price">$150.000</div>
+<div class="meta"></div>
+</div>
+<div class="card">
+<img src="https://cdn.shopify.com/s/files/1/0607/2074/2505/files/Dp-Despigmentante.png?v=1770076098" alt="" loading="lazy">
+<div class="title">Dermapen 4 Despigmentante – Protocolo Anti-Manchas Avanzado</div>
+<div class="price">$150.000</div>
+<div class="meta"></div>
+</div>
+<div class="card">
+<img src="https://cdn.shopify.com/s/files/1/0607/2074/2505/files/Dp-Estrias.png?v=1770076417" alt="" loading="lazy">
+<div class="title">Dermapen 4 Estrías – Remodelación Dérmica Corporal</div>
+<div class="price">$165.000</div>
+<div class="meta"></div>
+</div>
+<div class="card">
+<img src="https://cdn.shopify.com/s/files/1/0607/2074/2505/files/Dp-Capilar.png?v=1770076383" alt="" loading="lazy">
+<div class="title">Dp - Capilar</div>
+<div class="price">$166.500</div>
+<div class="meta"></div>
+</div>
+<div class="card">
+<img src="https://cdn.shopify.com/s/files/1/0607/2074/2505/files/img_8028.jpg?v=1770076059" alt="" loading="lazy">
+<div class="title">Drenaje Linfático Método Vodder – Restauración Profunda & Bienestar Integral</div>
+<div class="price">$45.000</div>
+<div class="meta"></div>
+</div>
+<div class="card">
+<img src="https://cdn.shopify.com/s/files/1/0607/2074/2505/files/Entrecejo-1.png?v=1770075881" alt="" loading="lazy">
+<div class="title">Entrecejo 6 Sesiones Hombre</div>
+<div class="price">$60.525</div>
+<div class="meta"></div>
+</div>
+<div class="card">
+<img src="https://cdn.shopify.com/s/files/1/0607/2074/2505/files/Entrecejo.png?v=1770076521" alt="" loading="lazy">
+<div class="title">Entrecejo 6 Sesiones Mujer</div>
+<div class="price">$55.000</div>
+<div class="meta"></div>
+</div>
+<div class="card">
+<img src="https://cdn.shopify.com/s/files/1/0607/2074/2505/files/Espalda-completa.png?v=1770075986" alt="" loading="lazy">
+<div class="title">Espalda completa 6 Sesiones Hombre</div>
+<div class="price">$261.000</div>
+<div class="meta"></div>
+</div>
+<div class="card">
+<img src="https://cdn.shopify.com/s/files/1/0607/2074/2505/files/Espalda-completa_9716796f-7ec2-443b-ac42-533f39c1ec18.png?v=1770076486" alt="" loading="lazy">
+<div class="title">Espalda completa 6 Sesiones Mujer</div>
+<div class="price">$217.800</div>
+<div class="meta"></div>
+</div>
+<div class="card">
+<img src="https://cdn.shopify.com/s/files/1/0607/2074/2505/files/ExoGrow-Colour-Recharge-Shampoo-Bar.png?v=1770076316" alt="" loading="lazy">
+<div class="title">Exo-Grow Colour Recharge Shampoo Bar – Dp Dermaceuticals | Restaurador Capilar 70 g</div>
+<div class="price">$47.900</div>
+<div class="meta"></div>
+</div>
+<div class="card">
+<img src="https://cdn.shopify.com/s/files/1/0607/2074/2505/files/Exo-Grow-Hair-Tonic.png?v=1770076241" alt="" loading="lazy">
+<div class="title">Exo-Grow Hair Tonic</div>
+<div class="price">$190.900</div>
+<div class="meta"></div>
+</div>
+<div class="card">
+<img src="https://cdn.shopify.com/s/files/1/0607/2074/2505/files/Exo-Grow-Lash-Brow.png?v=1770076248" alt="" loading="lazy">
+<div class="title">Exo-Grow Lash & Brow – Dp Dermaceuticals | Sérum Fortalecedor 7 ml</div>
+<div class="price">$35.900</div>
+<div class="meta"></div>
+</div>
+<div class="card">
+<img src="https://cdn.shopify.com/s/files/1/0607/2074/2505/files/Exo-Grow-Scalp-Mask.png?v=1770076244" alt="" loading="lazy">
+<div class="title">Exo-Grow Scalp Mask</div>
+<div class="price">$38.990</div>
+<div class="meta"></div>
+</div>
+<div class="card">
+<img src="https://cdn.shopify.com/s/files/1/0607/2074/2505/files/Exo-Grow-Set.jpg?v=1770076253" alt="" loading="lazy">
+<div class="title">Exo-Grow Set</div>
+<div class="price">$283.600</div>
+<div class="meta"></div>
+</div>
+<div class="card">
+<img src="https://cdn.shopify.com/s/files/1/0607/2074/2505/files/Exo-Grow-Shampoo.png?v=1770076237" alt="" loading="lazy">
+<div class="title">Exo-Grow Shampoo</div>
+<div class="price">$38.990</div>
+<div class="meta"></div>
+</div>
+<div class="card">
+<img src="https://cdn.shopify.com/s/files/1/0607/2074/2505/files/exobalm-1.png?v=1770076050" alt="" loading="lazy">
+<div class="title">ExoBalm – ExoCoBio | Bálsamo Regenerador 30 ml</div>
+<div class="price">$110.000</div>
+<div class="meta"></div>
+</div>
+</div>
+<h3>Productos en Draft (43)</h3>
+<div class="grid">
+<div class="card"><div class="title">ASCE+ Home Care Ampoule</div><div class="price">$88.900</div><span class="tag tag-draft">Draft</span></div>
+<div class="card"><div class="title">ASCE+ Home Care Firming Moisturizer</div><div class="price">$68.900</div><span class="tag tag-draft">Draft</span></div>
+<div class="card"><div class="title">ASCE+ Sunshine Cushion Pro</div><div class="price">$68.900</div><span class="tag tag-draft">Draft</span></div>
+<div class="card"><div class="title">Balancing - Expert Lab</div><div class="price">$78.900</div><span class="tag tag-draft">Draft</span></div>
+<div class="card"><div class="title">Bloqueador Facial Elta MD UV Clear 46 SPF</div><div class="price">$49.990</div><span class="tag tag-draft">Draft</span></div>
+<div class="card"><div class="title">Contorno de Ojos Antioxidante Iluminador – Timexpert Radiance C</div><div class="price">$63.200</div><span class="tag tag-draft">Draft</span></div>
+<div class="card"><div class="title">Crema Antioxidante Iluminadora – Timexpert Radiance C</div><div class="price">$86.900</div><span class="tag tag-draft">Draft</span></div>
+<div class="card"><div class="title">Crema Recuperadora Intensiva – Timexpert SRNS</div><div class="price">$94.900</div><span class="tag tag-draft">Draft</span></div>
+<div class="card"><div class="title">Dúo Piel Grasa</div><div class="price">$70.700</div><span class="tag tag-draft">Draft</span></div>
+<div class="card"><div class="title">Dúo Piel Mixta</div><div class="price">$71.300</div><span class="tag tag-draft">Draft</span></div>
+<div class="card"><div class="title">Eternalist A.G.E. [Retinol]</div><div class="price">$53.900</div><span class="tag tag-draft">Draft</span></div>
+<div class="card"><div class="title">Gift Card | Elige el monto que quieras!</div><div class="price">$50.000</div><span class="tag tag-draft">Draft</span></div>
+<div class="card"><div class="title">GliSODin</div><div class="price">$47.000</div><span class="tag tag-draft">Draft</span></div>
+<div class="card"><div class="title">Leche Desmaquillante Esencial – Línea Options</div><div class="price">$52.900</div><span class="tag tag-draft">Draft</span></div>
+<div class="card"><div class="title">Limpieza Facial Profunda - Piel Normal a Seca</div><div class="price">$46.750</div><span class="tag tag-draft">Draft</span></div>
+<div class="card"><div class="title">Limpieza Facial Profunda Dermaclear + Masaje de Relajación Cuerpo Completo</div><div class="price">$95.000</div><span class="tag tag-draft">Draft</span></div>
+<div class="card"><div class="title">Limpieza Facial Profunda con Peeling de Peptidos</div><div class="price">$71.500</div><span class="tag tag-draft">Draft</span></div>
+<div class="card"><div class="title">Limpieza Facial Profunda | Dermapen RAS Antiedad [De regalo Bloqueador travel Clear Elta MD]</div><div class="price">$168.000</div><span class="tag tag-draft">Draft</span></div>
+<div class="card"><div class="title">Loción Purificante Equilibrante – Línea Options</div><div class="price">$44.400</div><span class="tag tag-draft">Draft</span></div>
+<div class="card"><div class="title">Night Crema Confort Alta Recuperación – Timexpert SRNS</div><div class="price">$95.700</div><span class="tag tag-draft">Draft</span></div>
+<div class="card"><div class="title">Photocorrection D-Pigment 50+</div><div class="price">$30.900</div><span class="tag tag-draft">Draft</span></div>
+<div class="card"><div class="title">Pollution Defense Cream – Excel Therapy O2 | Germaine de Capuccini 50 ml</div><div class="price">$87.600</div><span class="tag tag-draft">Draft</span></div>
+<div class="card"><div class="title">Pro 60+ Timexpert SRNS</div><div class="price">$110.000</div><span class="tag tag-draft">Draft</span></div>
+<div class="card"><div class="title">Pure Age Perfection [Fluid]</div><div class="price">$33.900</div><span class="tag tag-draft">Draft</span></div>
+<div class="card"><div class="title">Repair Night Progress – Timexpert SRNS</div><div class="price">$179.900</div><span class="tag tag-draft">Draft</span></div>
+<div class="card"><div class="title">Sensilis Skin Glow [Pearl]</div><div class="price">$26.900</div><span class="tag tag-draft">Draft</span></div>
+<div class="card"><div class="title">Skin D-Pigment [Serum ATX B3]</div><div class="price">$49.900</div><span class="tag tag-draft">Draft</span></div>
+<div class="card"><div class="title">Skin Glow [Beyond C Serum]</div><div class="price">$51.900</div><span class="tag tag-draft">Draft</span></div>
+<div class="card"><div class="title">Skin Glow [Glycolic]</div><div class="price">$46.900</div><span class="tag tag-draft">Draft</span></div>
+<div class="card"><div class="title">Supreme Booster FeCE</div><div class="price">$59.900</div><span class="tag tag-draft">Draft</span></div>
+<div class="card"><div class="title">Sérum Pure C10</div><div class="price">$42.600</div><span class="tag tag-draft">Draft</span></div>
+<div class="card"><div class="title">Timexpert O2 – Oxigenación Celular & Defensa Anticontaminación</div><div class="price">$135.000</div><span class="tag tag-draft">Draft</span></div>
+<div class="card"><div class="title">Timexpert Radiance C+ | Luminosidad, Energía y Tono Uniforme</div><div class="price">$110.000</div><span class="tag tag-draft">Draft</span></div>
+<div class="card"><div class="title">Timexpert SRNS – Tratamiento Antiedad Global Reestructurante</div><div class="price">$110.000</div><span class="tag tag-draft">Draft</span></div>
+<div class="card"><div class="title">Timexpert Wrinkless – Tratamiento Pro-Colágeno Antiarrugas</div><div class="price">$120.000</div><span class="tag tag-draft">Draft</span></div>
+<div class="card"><div class="title">UV AOX Element Tinted</div><div class="price">$47.900</div><span class="tag tag-draft">Draft</span></div>
+<div class="card"><div class="title">UV Clear</div><div class="price">$47.900</div><span class="tag tag-draft">Draft</span></div>
+<div class="card"><div class="title">UV Daily</div><div class="price">$43.900</div><span class="tag tag-draft">Draft</span></div>
+<div class="card"><div class="title">Upgrade [AR]</div><div class="price">$49.900</div><span class="tag tag-draft">Draft</span></div>
+<div class="card"><div class="title">Upgrade [Make-Up]</div><div class="price">$35.900</div><span class="tag tag-draft">Draft</span></div>
+<div class="card"><div class="title">Zona de Regalo – Promo Depilación Láser Hombre (6 sesiones)</div><div class="price">$80.800</div><span class="tag tag-draft">Draft</span></div>
+<div class="card"><div class="title">Zona de Regalo – Promo Depilación Láser Mujer y Hombre (6 sesiones)</div><div class="price">$80.800</div><span class="tag tag-draft">Draft</span></div>
+<div class="card"><div class="title">pack mix 3 (copia)</div><div class="price">$220.000</div><span class="tag tag-draft">Draft</span></div>
+</div>
+<h3>Productos Archivados (14)</h3>
+<div class="grid">
+<div class="card"><div class="title">Brazos Superior 6 Sesiones Mujer</div><span class="tag tag-archived">Archivado</span></div>
+<div class="card"><div class="title">Exo-Grow Conditioner – Dp Dermaceuticals | Acondicionador Regenerador 300 ml</div><span class="tag tag-archived">Archivado</span></div>
+<div class="card"><div class="title">Limpieza + Yoga Facial</div><span class="tag tag-archived">Archivado</span></div>
+<div class="card"><div class="title">Limpieza Facial Profunda con Hidrodermoabrasión</div><span class="tag tag-archived">Archivado</span></div>
+<div class="card"><div class="title">Limpieza Facial Profunda – Pieles Maduras</div><span class="tag tag-archived">Archivado</span></div>
+<div class="card"><div class="title">Masaje Cervical, Hombros y Espalda</div><span class="tag tag-archived">Archivado</span></div>
+<div class="card"><div class="title">Masaje de Relajación Cuerpo Completo</div><span class="tag tag-archived">Archivado</span></div>
+<div class="card"><div class="title">Masaje de Relajación y Drenaje Linfatico</div><span class="tag tag-archived">Archivado</span></div>
+<div class="card"><div class="title">Peeling Retinol 0,3 % + Ácido Salicílico – Renovación Intensiva Profesional</div><span class="tag tag-archived">Archivado</span></div>
+<div class="card"><div class="title">Perfilado de Cejas 6 Sesiones Mujer</div><span class="tag tag-archived">Archivado</span></div>
+<div class="card"><div class="title">Pómulos 6 Sesiones Mujer</div><span class="tag tag-archived">Archivado</span></div>
+<div class="card"><div class="title">Rebaje Completo 6 Sesiones Mujer</div><span class="tag tag-archived">Archivado</span></div>
+<div class="card"><div class="title">Rebaje Semi 6 Sesiones Mujer</div><span class="tag tag-archived">Archivado</span></div>
+<div class="card"><div class="title">Rodillas 6 Sesiones Hombre</div><span class="tag tag-archived">Archivado</span></div>
+</div>
+</div>
+</div>
+</body>
+</html>
